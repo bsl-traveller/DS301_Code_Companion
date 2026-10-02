@@ -1,0 +1,28 @@
+# Python, Jupyter, and editor state
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.jupyter-data/
+.ipython/
+.matplotlib/
+.matplotlib-cache/
+
+# Datasets and derived artefacts stay local.  Keep only acquisition code and metadata.
+data/*
+!data/README.md
+!data/**/README.md
+!data/**/DATASET_MANIFEST.md
+real-world-examples/data/*
+!real-world-examples/data/DATASET_MANIFEST.md
+**/outputs/
+**/reports/
+**/figures/
+
+# OS and editor files
+.DS_Store
+*~
+*.swp
