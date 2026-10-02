@@ -4,10 +4,9 @@ These steps work on Windows, macOS, and Linux. Commands use Poetry, so you do no
 
 ## 1. Install prerequisites
 
-Install Git and Python **3.14.x** first. During Python installation on Windows, select **Add Python to PATH**. Confirm Python is available:
+Install Python **3.14.x**. During Python installation on Windows, select **Add Python to PATH**. Confirm Python is available:
 
 ```bash
-git --version
 python --version
 ```
 
@@ -45,28 +44,16 @@ poetry --version
 
 If the command is not found, add Poetry's bin directory to your shell PATH as instructed by the installer (commonly `$HOME/.local/bin`), reopen the terminal, and run the verification again. See [Poetry's installation documentation](https://python-poetry.org/docs/#installation) for a managed or proxy-restricted computer.
 
-## 2. Download the course material and install
+## 2. Create the course environment
 
-Open a terminal in the folder where you keep course work. Replace `<repository-url>` with the course link provided by your instructor, then run:
+From the `DS301_Code_Companion` folder you downloaded, run:
 
 ```bash
-git clone --branch course/content --single-branch <repository-url>
-cd DS301_Code_Companion
 poetry env use 3.14
 poetry install
 ```
 
 Poetry creates the local `.venv` automatically.
-
-### Receive course updates
-
-Before a new lecture, open a terminal in the `DS301_Code_Companion` folder and run:
-
-```bash
-git pull
-```
-
-This downloads any new course notebooks, examples, or assignment material published by the instructor. If you have made personal changes to a supplied file, copy your work to a separate location before pulling updates so you can keep it safely.
 
 On Windows, if `poetry env use 3.14` cannot find Python, provide the launcher instead:
 

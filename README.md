@@ -2,6 +2,23 @@
 
 This is the programming companion for **DS301: Data Science: An Introduction**. Use it alongside the lectures to explore concepts, practise with case studies, and complete assignments.
 
+## Get the course material
+
+Install [Git](https://git-scm.com/downloads), then open a terminal in the folder where you keep course work and run:
+
+```bash
+git clone --branch course/content --single-branch https://github.com/bsl-traveller/DS301_Code_Companion.git
+cd DS301_Code_Companion
+```
+
+Before a new lecture, return to this folder and run:
+
+```bash
+git pull
+```
+
+This downloads newly published notebooks, examples, and assignment material. If you have changed a supplied file for personal practice, save a copy elsewhere before updating.
+
 ## Repository layout
 
 - `notebooks/01_*` through `notebooks/10_*` — the lecture notebooks, in teaching order. See `LECTURE_COVERAGE.md` before class.
@@ -17,7 +34,7 @@ This is the programming companion for **DS301: Data Science: An Introduction**. 
 
 ## Start here
 
-Read [SETUP.md](SETUP.md) to install the course environment. Then work through the numbered lecture notebooks in order, attempt the matching case study, and consult the corresponding reference solution only after making your own attempt. Before using a case-study dataset, read [the dataset manifest](docs/data/DATASET_MANIFEST.md) for its source and limitations.
+After downloading the course material, read [SETUP.md](SETUP.md) to install the course environment. Then work through the numbered lecture notebooks in order, attempt the matching case study, and consult the corresponding reference solution only after making your own attempt. Before using a case-study dataset, read [the dataset manifest](docs/data/DATASET_MANIFEST.md) for its source and limitations.
 
 ## Working with notebooks
 
