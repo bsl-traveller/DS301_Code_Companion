@@ -1,0 +1,18 @@
+# Dataset manifest
+
+| Key | Source and citation | Licence/access | Book/project uses | Required caution |
+|---|---|---|---|---|
+| `bank_marketing` | Moro, Rita & Cortez (2014), UCI Bank Marketing, DOI `10.24432/C5K306` | CC BY 4.0 | classification, campaign policy, imbalance | A successful contact is not necessarily incremental treatment benefit. The `duration` field is unavailable before a call ends and can leak future information. |
+| `bike_sharing` | Fanaee-T (2013), UCI Bike Sharing, DOI `10.24432/C5W894` | CC BY 4.0 | time series, weather, regression, staffing/rebalancing | Historical Washington DC demand is context-specific; prediction is not a transport-policy effect. |
+| `online_retail` | Chen (2015), UCI Online Retail, DOI `10.24432/C5BW33` | CC BY 4.0 | transactions, returns, cohorts, RFM, customer analytics | Cancellation codes, customer identifiers and observation-window effects must be handled explicitly. |
+| `wholesale_customers` | Cardoso (2013), UCI Wholesale Customers, DOI `10.24432/C5030X` | CC BY 4.0 | scaling, clustering, profiling | Clusters are analyst-created summaries, not natural customer types or causal segments. |
+| `credit_default` | Yeh & Lien (2009), UCI Default of Credit Card Clients, DOI `10.24432/C55S3H` | CC BY 4.0 | classification, calibration, error cost, governance | Historical Taiwanese credit records do not justify automated adverse action; selective data and changing policy constrain transport. |
+| `adult` | Becker & Kohavi (1996), UCI Adult, DOI `10.24432/C5XW20` | CC BY 4.0 | fairness concepts, category and measurement audit | Based on 1994 US census extracts with historical, socially constructed categories. Use for critical audit, never to essentialise groups. |
+| `sms_spam` | Almeida & Hidalgo (2012), UCI SMS Spam Collection, DOI `10.24432/C5CC84` | CC BY 4.0 | text representation, classification, queue evaluation | The messages combine historical collection sources; duplicate templates, language drift and present-day transfer require audit. |
+| `email_eu_core` | Stanford Network Analysis Project, email-Eu-core network | Public research dataset; cite source publications | directed degree, density, components, graph-boundary reasoning | An edge records at least one internal email under the dataset boundary; it does not prove friendship, influence, performance or wrongdoing. |
+| `world_bank_india` | World Bank Indicators API v2 | No key; attribution and World Bank dataset terms apply | BI, metadata, indicators, annual time series | Indicator definitions, revisions, missing years and current/constant-price choices must be checked before comparison. |
+| `synthetic_customer_operations` | Companion generator, seed 301 | Author-created synthetic data | joins, quality, EDA, time, visualisation, projects | Patterns are intentionally designed and must not be presented as empirical findings about a real business. |
+| `synthetic_subscription_duration` | Companion generator, seed 301 | Author-created synthetic data | censoring, risk sets, Kaplan--Meier estimation | The designed hazard and censoring mechanism are pedagogical; no record describes a real subscriber or survival process. |
+| `synthetic_product_experiment` | Companion generator, seed 301 | Author-created synthetic data | assignment audit, difference in proportions, guardrails, heterogeneous effects | The treatment effects are deliberately embedded and do not estimate any real product intervention. |
+
+Official source pages and API documentation are embedded in `src/ds301/data_catalog.py`. A downloaded dataset's folder contains `metadata.json` and, when supplied by UCI, `variables.csv`.

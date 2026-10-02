@@ -1,29 +1,24 @@
 # DS301: Data Science — course companion
 
-This repository is the programming companion for the material delivered in **DS301: Data Science: An Introduction**. It intentionally separates classroom concept notebooks from executable examples that address a concrete decision using real or explicitly synthetic datasets.
+This is the programming companion for **DS301: Data Science: An Introduction**. Use it alongside the lectures to explore concepts, practise with case studies, and complete assignments.
 
 ## Repository layout
 
-- `lectures/` — one self-contained notebook for each delivered lecture (Lectures 1–10), organised in teaching order. `lectures/README.md` records the concept and practice outcome for each session.
-- `assignments/` — the five assignment briefs aligned to the first ten lectures.
-- `real-world-examples/` — runnable, Jupytext-paired examples for Projects 1–10. Each project is a distinct decision problem, with source code, a notebook rendering, data-acquisition scripts, provenance metadata, and lightweight reusable helpers.
+- `notebooks/01_*` through `notebooks/10_*` — the lecture notebooks, in teaching order. See `LECTURE_COVERAGE.md` before class.
+- `notebooks/case_studies/` — ten case studies for guided practice. Each has a classroom-ready `.ipynb` notebook and matching `.py` source.
+- `notebooks/solutions/` — instructor/reference solutions paired with the case studies. Use these only after attempting the corresponding case.
+- `assignments/` — five briefs aligned to the first ten lectures.
+- `src/ds301/` — reusable utilities that help notebooks locate, validate, and load datasets.
+- `data/` — where generated and downloaded datasets are stored on your computer.
+- `docs/data/` — data definitions, sources, and guidance for appropriate use.
+- `outputs/` — created locally when you save charts, tables, or reports while exploring; it is safe to delete and is not needed to run the course notebooks.
+- `scripts/` — explicit commands for downloading open data and generating synthetic teaching data.
+- `tests/` — automated checks used to keep the supporting utilities reliable.
 
-## Branch policy
+## Start here
 
-`main` is reserved for the small, stable repository foundation. Teaching material belongs on `course/content`, and should be committed incrementally as it is covered in class. This checkout is on `course/content`; no files have been committed or staged by the setup.
-
-## Data policy
-
-The repository contains code, notebooks, assignment briefs, and dataset metadata only. Raw data, synthetic generated data, notebook checkpoints, environments, caches, and generated outputs are ignored. For real-world examples, follow `real-world-examples/data/DATASET_MANIFEST.md` and run the relevant command in `real-world-examples/scripts/` to create the local data copy. Do not commit those files.
+Read [SETUP.md](SETUP.md) to install the course environment. Then work through the numbered lecture notebooks in order, attempt the matching case study, and consult the corresponding reference solution only after making your own attempt. Before using a case-study dataset, read [the dataset manifest](docs/data/DATASET_MANIFEST.md) for its source and limitations.
 
 ## Working with notebooks
 
-The Python files in `real-world-examples/notebooks/` are the version-control-friendly notebook sources. Their paired `.ipynb` files are included for direct classroom use. Regenerate a notebook locally, if needed, with Jupytext:
-
-```bash
-cd real-world-examples
-poetry install
-poetry run jupytext --to ipynb notebooks/assignment01_quality_audit.py
-```
-
-The lecture notebooks use the dependencies declared in `pyproject.toml` at the repository root.
+Use Python 3.14.x and open the `.ipynb` files in JupyterLab. Run cells in order; pause at the reflection prompts and adapt the examples to test your understanding. The supporting `ds301` package handles dataset locations and checks dataset descriptions before data is downloaded or saved.

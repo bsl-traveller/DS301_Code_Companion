@@ -1,5 +1,6 @@
 # Python, Jupyter, and editor state
 .venv/
+.venv-legacy-3.11-pending-fuse-cleanup/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -11,13 +12,9 @@ __pycache__/
 .matplotlib/
 .matplotlib-cache/
 
-# Datasets and derived artefacts stay local.  Keep only acquisition code and metadata.
-data/*
-!data/README.md
-!data/**/README.md
-!data/**/DATASET_MANIFEST.md
-real-world-examples/data/*
-!real-world-examples/data/DATASET_MANIFEST.md
+# Datasets and derived artefacts stay local. Keep only the empty directory marker.
+/data/*
+!/data/.gitkeep
 **/outputs/
 **/reports/
 **/figures/
